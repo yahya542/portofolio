@@ -182,5 +182,107 @@
     });
 
   });
+  
+  /**
+   * Custom animations and effects
+   */
+  
+  // Add fade-in animation to elements when they come into view
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    
+    elements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.3;
+      
+      if (elementPosition < screenPosition) {
+        element.classList.add('animated');
+      }
+    });
+  }
+  
+  // Add hover effects to buttons and cards
+  function addHoverEffects() {
+    const buttons = document.querySelectorAll('button, .btn');
+    const cards = document.querySelectorAll('.card, .service-item, .portfolio-item, .certificate-card');
+    
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px)';
+        this.style.boxShadow = '0 10px 20px rgba(52, 183, 167, 0.3)';
+      });
+      
+      button.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 15px rgba(52, 183, 167, 0.3)';
+      });
+    });
+    
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.15)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.08)';
+      });
+    });
+  }
+  
+  // Add typing effect to hero section
+  function initTypingEffect() {
+    const typingElements = document.querySelectorAll('.typing-text');
+    
+    typingElements.forEach(element => {
+      const text = element.getAttribute('data-text') || element.textContent;
+      const speed = element.getAttribute('data-speed') || 100;
+      
+      if (text) {
+        element.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        
+        typeWriter();
+      }
+    });
+  }
+  
+  // Add parallax effect to hero background
+  function initParallax() {
+    const heroSection = document.querySelector('.hero');
+    
+    if (heroSection) {
+      window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+        heroSection.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+      });
+    }
+  }
+  
+  // Initialize all custom animations
+  function initCustomAnimations() {
+    animateOnScroll();
+    addHoverEffects();
+    initTypingEffect();
+    initParallax();
+    
+    // Add scroll event listener for animations
+    window.addEventListener('scroll', animateOnScroll);
+  }
+  
+  // Run custom animations on load
+  window.addEventListener('load', initCustomAnimations);
+  
+  // Run custom animations on DOM content loaded
+  document.addEventListener('DOMContentLoaded', initCustomAnimations);
 
 })();

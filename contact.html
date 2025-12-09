@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - Kelly Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Contact - Muhammad Yahya | Full Stack Engineer</title>
+  <meta name="description" content="Get in touch with Muhammad Yahya, a Full Stack Engineer ready to collaborate on your next project.">
+  <meta name="keywords" content="Contact, Hire, Freelance, Web Development, Muhammad Yahya">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,6 +26,154 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <style>
+    .contact-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #34b7a7, #1976d2);
+      color: white;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .info-item {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .info-item h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #34b7a7;
+    }
+    
+    .php-email-form {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    .form-control {
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 12px 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: #34b7a7;
+      box-shadow: 0 0 0 0.2rem rgba(52, 183, 167, 0.25);
+    }
+    
+    .btn-submit {
+      background: linear-gradient(90deg, #34b7a7, #1976d2);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52, 183, 167, 0.3);
+      width: 100%;
+    }
+    
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(52, 183, 167, 0.4);
+      color: white;
+    }
+    
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    .section-title h2 {
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #34b7a7, #1976d2);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    
+    .social-contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .social-contact a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #34b7a7, #1976d2);
+      color: white;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-contact a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(52, 183, 167, 0.4);
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Kelly
@@ -40,11 +188,8 @@
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Kelly</h1>
+    <a href="https://www.youtube.com/channel/UCnB4uwRJC25qG9gI5Yc0UBQ" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/sc.png" alt="" srcset="">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -52,23 +197,13 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html">Certificates</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">Tools</a></li>
             </ul>
           </li>
           <li><a href="contact.html" class="active">Contact</a></li>
@@ -94,7 +229,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Let's connect and discuss your next project</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -102,58 +237,71 @@
         <div class="row gy-4">
 
           <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-item">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt"></i>
                 </div>
-              </div><!-- End Info Item -->
+                <h3>Location</h3>
+                <p>Madura, Indonesian</p>
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+              <div class="info-item">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone"></i>
                 </div>
-              </div><!-- End Info Item -->
+                <h3>Call Me</h3>
+                <p>+62 851 8464 7793</p>
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
+              <div class="info-item">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope"></i>
                 </div>
-              </div><!-- End Info Item -->
+                <h3>Email Me</h3>
+                <p>sajakcodingan@gmail.com</p>
+              </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="social-contact">
+                <a href="#"><i class="bi bi-github"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="php-email-form" data-aos="fade-up" data-aos-delay="300">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                  <div class="form-group">
+                    <label for="name-field">Your Name</label>
+                    <input type="text" name="name" id="name-field" class="form-control" required="">
+                  </div>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                  <div class="form-group">
+                    <label for="email-field">Your Email</label>
+                    <input type="email" class="form-control" name="email" id="email-field" required="">
+                  </div>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  <div class="form-group">
+                    <label for="subject-field">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  </div>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  <div class="form-group">
+                    <label for="message-field">Message</label>
+                    <textarea class="form-control" name="message" rows="8" id="message-field" required=""></textarea>
+                  </div>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -161,11 +309,11 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" class="btn-submit">Send Message</button>
                 </div>
 
               </div>
-            </form>
+            </div>
           </div><!-- End Contact Form -->
 
         </div>
@@ -180,7 +328,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Kelly</strong> <span>All Rights Reserved<br></span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Yahya</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -188,11 +336,7 @@
         <a href=""><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      <div class="credits text-center">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
