@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pricing - Muhammad Yahya</title>
+  <meta name="description" content="Detailed pricing for fullstack development services">
+  <meta name="keywords" content="Pricing, Fullstack Development, Web Development, Mobile Development, DevOps">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <!-- Custom Styles for Enhanced Design -->
+  <style>
+    /* Service Offers Section Styles */
+    .service-offers {
+      background-color: #11224E;
+      padding: 80px 0;
+      color: white;
+    }
+    
+    .service-offers .section-title {
+      margin-bottom: 50px;
+    }
+    
+    .service-offers .section-title h2 {
+      color: white;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .service-offers .section-title h2:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #F87B1B, #CBD99B);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    
+    .service-header h3 {
+      color: white;
+      font-weight: 700;
+    }
+    
+    .service-header h4 {
+      color: #F87B1B;
+      font-weight: 600;
+    }
+    
+    .service-offers h4 {
+      color: white;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+    
+    /* Pricing Card Styles */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .pricing-card {
+      background: rgba(248, 123, 27, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid white;
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      border-color: #F87B1B;
+    }
+    
+    .pricing-card.popular {
+      border: 2px solid white;
+      box-shadow: 0 15px 40px rgba(248, 123, 27, 0.4);
+    }
+    
+    .popular-badge {
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      background: yellow;
+      color: red;
+      padding: 5px 30px;
+      font-size: 12px;
+      font-weight: bold;
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+    
+    .pricing-header {
+      text-align: center;
+      padding: 30px 20px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .pricing-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #11224E;
+    }
+    
+    .pricing-price {
+      font-size: 28px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 5px;
+    }
+    
+    .pricing-subtitle {
+      font-size: 14px;
+      color: white;
+      margin: 0;
+    }
+    
+    .pricing-body {
+      padding: 25px 20px;
+    }
+    
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .pricing-features li {
+      padding: 10px 0;
+      border-bottom: 1px dashed white;
+      font-size: 14px;
+      color: #11224E;
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-features li strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #11224E;
+    }
+    
+    .service-notes {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-left: 4px solid #F87B1B;
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+    
+    .service-notes ul {
+      padding-left: 20px;
+    }
+    
+    .service-notes li {
+      margin-bottom: 10px;
+      color: #CBD99B;
+    }
+    
+    @media (max-width: 768px) {
+      .pricing-price {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body class="pricing-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="https://www.youtube.com/channel/UCnB4uwRJC25qG9gI5Yc0UBQ" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/sc.png" alt="" srcset="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Certificates</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">Tools</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="service-offers section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Detailed Pricing</h2>
+        <p>Complete pricing structure for all our technical services</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="service-offers-content" data-aos="fade-up" data-aos-delay="100">
+          <!-- Service Offer Header -->
+          <div class="row mb-5">
+            <div class="col-lg-12 text-center">
+              <div class="service-header">
+                <h3 class="mb-4">🚀 Penawaran Jasa Pengembangan & Infrastruktur Sistem</h3>
+                <h4>MUHAMMAD YAHYA ABDULLAHISSALAM</h4>
+                <p class="fst-italic">FULLSTACK ENGINEER | LINTAS-PLATFORM DEVELOPER</p>
+                <p class="mt-3">Kami menawarkan solusi teknis yang teruji, mulai dari pembangunan aplikasi <em>mobile</em> dan <em>backend</em> yang kuat, hingga penjaminan stabilitas infrastruktur di lingkungan produksi.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="row mb-5">
+            <div class="col-lg-12">
+              <h4 class="mb-4 text-center" style="color: gold;">Backend Development (Django, Laravel, Golang)</h4>
+              <div class="pricing-container row">
+                <!-- Basic Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Basic</h5>
+                      <div class="pricing-price">Rp 5 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Pembangunan CRUD Sederhana:</strong> Pembuatan REST API untuk satu modul dengan otentikasi dasar (e.g., Manajemen Produk/Pengguna).</li>
+                        <li>Database relasional dasar (MySQL)</li>
+                        <li>3-4 <em>endpoints</em> utama</li>
+                        <li><em>Framework</em> standar (Flask/Laravel)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Medium Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100 popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Medium</h5>
+                      <div class="pricing-price">Rp 15 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Integrasi API Eksternal & Logic Kompleks:</strong> Pengembangan <em>backend</em> dengan integrasi layanan pihak ketiga (Payment Gateway, Geolocation API), termasuk <em>security</em> (JWT/OAuth).</li>
+                        <li>Penggunaan <em>ORM</em> tingkat lanjut</li>
+                        <li><em>Caching</em> ringan</li>
+                        <li>Penanganan <em>state</em> kompleks</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Complex Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Complex</h5>
+                      <div class="pricing-price">Rp 30 Juta+</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Microservices / High Performance System:</strong> Membangun <em>backend</em> dengan Golang untuk <em>high concurrency</em>, implementasi <em>Message Queue</em>, atau integrasi <em>Machine Learning</em>.</li>
+                        <li>Arsitektur <em>service-oriented</em></li>
+                        <li><em>Performance optimization</em></li>
+                        <li><em>Testing</em> unit yang ketat</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend Mobile Development -->
+          <div class="row mb-5">
+            <div class="col-lg-12">
+              <h4 class="mb-4 text-center" style="color: gold;">Frontend Mobile Development (React Native)</h4>
+              <div class="pricing-container row">
+                <!-- Starter Tier -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Starter</h5>
+                      <div class="pricing-price">Rp 1,5 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Perbaikan Bug Ringan / Setup Proyek:</strong> Memperbaiki satu atau dua <em>bug</em> minor di <em>layout</em>/<em>styling</em>, atau <em>setup</em> struktur proyek React Native awal.</li>
+                        <li>Fokus pada <em>styling</em> (CSS/Layout)</li>
+                        <li><em>Setup</em> <em>dependencies</em> dasar</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Basic Tier -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Basic</h5>
+                      <div class="pricing-price">Rp 4 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Landing Page App:</strong> Aplikasi <em>mobile</em> satu atau dua halaman statis untuk menampilkan informasi.</li>
+                        <li>UI/UX dasar (<em>styling</em> native)</li>
+                        <li>Tanpa koneksi <em>live</em> API <em>backend</em></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Medium Tier -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="pricing-card h-100 popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Medium</h5>
+                      <div class="pricing-price">Rp 12 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Connected Mobile App:</strong> Aplikasi dengan otentikasi <em>live</em>, menampilkan data dinamis dari REST API <em>backend</em>, dan navigasi multi-halaman.</li>
+                        <li>Penggunaan <em>State Management</em></li>
+                        <li>Fetching API asinkron</li>
+                        <li>Navigasi yang kompleks</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Complex Tier -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Complex</h5>
+                      <div class="pricing-price">Rp 25 Juta+</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Fitur Device Native & Real-Time:</strong> Aplikasi dengan fitur canggih seperti penggunaan GPS <em>real-time</em>, Notifikasi <em>Push</em>, atau integrasi <em>chat real-time</em>.</li>
+                        <li>Penggunaan <em>Native Modules</em></li>
+                        <li><em>Performance optimization</em></li>
+                        <li>Penanganan <em>error</em> <em>offline/online</em></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Stack Development -->
+          <div class="row mb-5">
+            <div class="col-lg-12">
+              <h4 class="mb-4 text-center" style="color: gold;">Full Stack Development (Backend + Frontend)</h4>
+              <div class="pricing-container row">
+                <!-- Basic Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Basic</h5>
+                      <div class="pricing-price">Rp 18 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Aplikasi Internal Sederhana:</strong> Sistem Inventaris/CMS sederhana. Backend Django/Laravel, Frontend HTML/Bootstrap.</li>
+                        <li>Desain yang sudah tersedia</li>
+                        <li><em>Full CRUD</em> dengan 5-7 model <em>database</em></li>
+                        <li>Otentikasi standar</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Medium Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100 popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Medium</h5>
+                      <div class="pricing-price">Rp 35 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Sistem Bisnis Kecil:</strong> Aplikasi yang melibatkan tiga jenis <em>user</em> (e.g., Admin, Moderator, User Umum) dengan <em>role</em> dan otorisasi berbeda. Backend + Mobile React Native.</li>
+                        <li>Pengembangan <em>Custom</em> API</li>
+                        <li><em>Security</em> level <em>role</em></li>
+                        <li><em>User experience</em> <em>mobile</em> yang terkurasi</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Complex Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Complex</h5>
+                      <div class="pricing-price">Rp 60 Juta+</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Marketplace / Platform Besar:</strong> Pengembangan sistem pencarian dengan fitur rating, review, <em>chat</em>, dan <em>real-time status</em>.</li>
+                        <li>Skalabilitas</li>
+                        <li><em>Performance tuning</em></li>
+                        <li><em>Server load balancing</em> (jika <em>deployment</em> diminta)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Administration & DevOps Support -->
+          <div class="row mb-5">
+            <div class="col-lg-12">
+              <h4 class="mb-4 text-center" style="color: gold;">System Administration & DevOps Support</h4>
+              <div class="pricing-container row">
+                <!-- Basic Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Basic</h5>
+                      <div class="pricing-price">Rp 1 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Konfigurasi Server Awal:</strong> Setup VPS Linux (Ubuntu), instalasi <em>Web Server</em> (Nginx/Apache), dan <em>database</em> (MySQL) untuk lingkungan <em>staging</em> atau <em>dev</em>.</li>
+                        <li><em>Hardening</em> dasar</li>
+                        <li><em>Setting</em> <em>environment variables</em></li>
+                        <li>Manajemen <em>user</em> dan <em>permissions</em></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Medium Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100 popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Medium</h5>
+                      <div class="pricing-price">Rp 3 Juta</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>System Recovery & Upgrade Kritis:</strong> <em>Troubleshooting</em> error produksi (e.g., <em>database schema</em> / konflik <em>dependency</em> Composer), atau migrasi/upgrade aplikasi (e.g., OJS/CMS) ke versi terbaru.</li>
+                        <li>Analisis <em>log</em> mendalam</li>
+                        <li><em>Backup</em> data</li>
+                        <li><em>Command line utility</em> lanjutan (<code>chown</code>, <code>find</code>, <code>chmod</code>)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Complex Tier -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="pricing-card h-100">
+                    <div class="pricing-header">
+                      <h5 class="pricing-title">Complex</h5>
+                      <div class="pricing-price">Rp 7 Juta+</div>
+                      <p class="pricing-subtitle">Mulai dari</p>
+                    </div>
+                    <div class="pricing-body">
+                      <ul class="pricing-features">
+                        <li><strong>Containerization & CI/CD Setup:</strong> Migrasi aplikasi ke lingkungan <strong>Docker</strong>, atau implementasi <em>workflow</em> CI/CD sederhana (e.g., Jenkins/GitHub Actions) untuk otomatisasi <em>deployment</em>.</li>
+                        <li>Penulisan <em>Dockerfile</em> yang efisien</li>
+                        <li><em>Pipeline setup</em></li>
+                        <li>Manajemen <em>volume</em> dan <em>network</em> Docker</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="service-notes p-4 rounded">
+                <h5 class="mb-3">Catatan Penting:</h5>
+                <ul>
+                  <li><strong>Estimasi Budget Awal:</strong> Harga ini adalah titik awal (starting price) dan dapat disesuaikan berdasarkan jumlah fitur spesifik, <em>timeline</em> proyek, dan <em>scope</em> kerja yang disepakati.</li>
+                  <li><strong>Keunggulan Utama:</strong> Keahlian unik kami adalah kemampuan menyelesaikan masalah <em>troubleshooting</em> infrastruktur (DevOps) yang sering dihadapi setelah proses <em>development</em>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Pricing Section -->
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits text-center">
+        &copy; Copyright <strong><span>Muhammad Yahya</span></strong>. All Rights Reserved
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

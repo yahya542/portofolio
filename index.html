@@ -44,7 +44,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      background: linear-gradient(135deg, #11224E 0%, #1a336e 50%, #22448e 100%);
     }
     
     .hero::before {
@@ -54,7 +54,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at center, rgba(52, 183, 167, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle at center, rgba(248, 123, 27, 0.1) 0%, transparent 70%);
       z-index: 1;
     }
     
@@ -70,7 +70,7 @@
     .particle {
       position: absolute;
       border-radius: 50%;
-      background: rgba(52, 183, 167, 0.5);
+      background: rgba(248, 123, 27, 0.5);
       animation: float 15s infinite linear;
     }
     
@@ -88,7 +88,7 @@
       font-size: 4rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      background: linear-gradient(90deg, #34b7a7, #1976d2, #ffffff);
+      background: linear-gradient(90deg, #F87B1B, #CBD99B, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -99,14 +99,14 @@
     .hero h2 {
       font-size: 1.8rem;
       margin-bottom: 2rem;
-      color: #e0e0e0;
+      color: #CBD99B;
       font-weight: 300;
       letter-spacing: 1px;
     }
     
     .typing-text {
       font-size: 1.4rem;
-      color: #34b7a7;
+      color: #F87B1B;
       font-weight: 500;
       min-height: 2rem;
       margin-bottom: 2rem;
@@ -114,7 +114,7 @@
     }
     
     .btn-custom {
-      background: linear-gradient(90deg, #34b7a7, #1976d2);
+      background: linear-gradient(90deg, #F87B1B, #11224E);
       border: none;
       padding: 15px 40px;
       border-radius: 50px;
@@ -123,7 +123,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 20px rgba(52, 183, 167, 0.4);
+      box-shadow: 0 5px 20px rgba(248, 123, 27, 0.4);
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -133,15 +133,15 @@
     
     .btn-custom:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(52, 183, 167, 0.6);
+      box-shadow: 0 8px 25px rgba(248, 123, 27, 0.6);
       color: white;
     }
     
     .btn-outline-custom {
-      border: 2px solid #34b7a7;
+      border: 2px solid #F87B1B;
       padding: 13px 38px;
       border-radius: 50px;
-      color: #34b7a7;
+      color: #F87B1B;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -155,10 +155,10 @@
     }
     
     .btn-outline-custom:hover {
-      background: #34b7a7;
+      background: #F87B1B;
       color: white;
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(52, 183, 167, 0.6);
+      box-shadow: 0 8px 25px rgba(248, 123, 27, 0.6);
     }
     
     .social-icons {
@@ -186,8 +186,8 @@
     
     .social-icons a:hover {
       transform: translateY(-8px) scale(1.1);
-      background: linear-gradient(135deg, #34b7a7, #1976d2);
-      box-shadow: 0 8px 20px rgba(52, 183, 167, 0.5);
+      background: linear-gradient(135deg, #F87B1B, #11224E);
+      box-shadow: 0 8px 20px rgba(248, 123, 27, 0.5);
     }
     
     .scroll-indicator {
@@ -250,6 +250,165 @@
       }
     }
     
+    /* Service Offers Section Styles */
+    .service-offers {
+      background-color: #11224E;
+      padding: 80px 0;
+      color: white;
+    }
+    
+    .service-offers .section-title {
+      margin-bottom: 50px;
+    }
+    
+    .service-offers .section-title h2 {
+      color: white;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .service-offers .section-title h2:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #F87B1B, #CBD99B);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    
+    .service-header h3 {
+      color: white;
+      font-weight: 700;
+    }
+    
+    .service-header h4 {
+      color: #F87B1B;
+      font-weight: 600;
+    }
+    
+    .service-offers h4 {
+      color: white;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+    
+    /* Pricing Card Styles */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .pricing-card {
+      background: rgba(248, 123, 27, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid white;
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      border-color: #F87B1B;
+    }
+    
+    .pricing-card.popular {
+      border: 2px solid white;
+      box-shadow: 0 15px 40px rgba(248, 123, 27, 0.4);
+    }
+    
+    .popular-badge {
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      background: yellow;
+      color: red;
+      padding: 5px 30px;
+      font-size: 12px;
+      font-weight: bold;
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+    
+    .pricing-header {
+      text-align: center;
+      padding: 30px 20px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .pricing-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #11224E;
+    }
+    
+    .pricing-price {
+      font-size: 28px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 5px;
+    }
+    
+    .pricing-subtitle {
+      font-size: 14px;
+      color: white;
+      margin: 0;
+    }
+    
+    .pricing-body {
+      padding: 25px 20px;
+    }
+    
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .pricing-features li {
+      padding: 10px 0;
+      border-bottom: 1px dashed white;
+      font-size: 14px;
+      color: #11224E;
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-features li strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #11224E;
+    }
+    
+    .service-notes {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-left: 4px solid #F87B1B;
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+    
+    .service-notes ul {
+      padding-left: 20px;
+    }
+    
+    .service-notes li {
+      margin-bottom: 10px;
+      color: #CBD99B;
+    }
+    
     @media (max-width: 992px) {
       .hero h1 {
         font-size: 3rem;
@@ -284,6 +443,14 @@
         height: 50px;
         font-size: 1.2rem;
       }
+      
+      .pricing-card {
+        margin-bottom: 20px;
+      }
+      
+      .pricing-price {
+        font-size: 24px;
+      }
     }
     
     @media (max-width: 576px) {
@@ -299,6 +466,35 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+      }
+      
+      .service-offers {
+        padding: 50px 0;
+      }
+      
+      .pricing-card {
+        margin-bottom: 20px;
+      }
+      
+      .pricing-header {
+        padding: 20px 15px 15px;
+      }
+      
+      .pricing-title {
+        font-size: 20px;
+      }
+      
+      .pricing-price {
+        font-size: 22px;
+      }
+      
+      .pricing-body {
+        padding: 20px 15px;
+      }
+      
+      .pricing-features li {
+        padding: 8px 0;
+        font-size: 13px;
       }
     }
   </style>
@@ -319,6 +515,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Certificates</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -382,6 +579,89 @@
 
     </section><!-- /Hero Section -->
 
+    <!-- Service Offers Section -->
+    <section id="service-offers" class="service-offers section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Service Offers</h2>
+        <p>Professional solutions tailored to your business needs</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="service-offers-content" data-aos="fade-up" data-aos-delay="100">
+          <!-- Service Categories -->
+          <div class="row mb-5">
+            <div class="col-lg-12 text-center">
+              <div class="service-header">
+                <h3 class="mb-4">🚀 Layanan Pengembangan Profesional</h3>
+                <p class="mt-3">Solusi teknis lengkap untuk kebutuhan pengembangan perangkat lunak dan infrastruktur Anda.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-container row">
+            <!-- Fullstack Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="pricing-card h-100 text-center">
+                <div class="pricing-header">
+                  <h5 class="pricing-title">Jasa Fullstack</h5>
+                  <div class="pricing-price">Mulai dari</div>
+                  <p class="pricing-subtitle">Rp 5 Juta</p>
+                </div>
+                <div class="pricing-body">
+                  <p>Pengembangan aplikasi end-to-end dengan teknologi modern</p>
+                  <a href="pricing.html" class="btn btn-custom mt-3">Lihat Detail</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frontend Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="pricing-card h-100 text-center">
+                <div class="pricing-header">
+                  <h5 class="pricing-title">Jasa Frontend</h5>
+                  <div class="pricing-price">Mulai dari</div>
+                  <p class="pricing-subtitle">Rp 1,5 Juta</p>
+                </div>
+                <div class="pricing-body">
+                  <p>Antarmuka pengguna yang menarik dan responsif</p>
+                  <a href="pricing.html" class="btn btn-custom mt-3">Lihat Detail</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="pricing-card h-100 text-center">
+                <div class="pricing-header">
+                  <h5 class="pricing-title">Jasa Backend</h5>
+                  <div class="pricing-price">Mulai dari</div>
+                  <p class="pricing-subtitle">Rp 5 Juta</p>
+                </div>
+                <div class="pricing-body">
+                  <p>API dan logika bisnis yang handal dan skalabel</p>
+                  <a href="pricing.html" class="btn btn-custom mt-3">Lihat Detail</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- DevOps Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="pricing-card h-100 text-center">
+                <div class="pricing-header">
+                  <h5 class="pricing-title">Jasa DevOps</h5>
+                  <div class="pricing-price">Mulai dari</div>
+                  <p class="pricing-subtitle">Rp 1 Juta</p>
+                </div>
+                <div class="pricing-body">
+                  <p>Infrastruktur dan deployment yang stabil</p>
+                  <a href="pricing.html" class="btn btn-custom mt-3">Lihat Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Service Offers Section -->
   </main>
 
   <footer id="footer" class="footer light-background">
