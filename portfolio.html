@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Portfolio - Muhammad Yahya | Full Stack Engineer</title>
-  <meta name="description" content="Explore the portfolio of Muhammad Yahya, showcasing web development projects, design work, and creative solutions.">
+  <meta name="description"
+    content="Explore the portfolio of Muhammad Yahya, showcasing web development projects, design work, and creative solutions.">
   <meta name="keywords" content="Portfolio, Projects, Web Development, Design, Muhammad Yahya">
 
   <!-- Favicons -->
@@ -15,7 +16,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +29,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  
+
   <!-- Custom Styles -->
   <style>
     .portfolio-filters {
@@ -35,7 +38,7 @@
       list-style: none;
       text-align: center;
     }
-    
+
     .portfolio-filters li {
       cursor: pointer;
       display: inline-block;
@@ -47,19 +50,19 @@
       border-radius: 50px;
       transition: all 0.3s ease-in-out;
       font-family: var(--heading-font);
-      background: rgba(248, 123, 27, 0.1);
-      color: #F87B1B;
-      border: 1px solid #F87B1B;
+      background: rgba(0, 119, 182, 0.1);
+      color: #0077b6;
+      border: 1px solid #0077b6;
     }
-    
+
     .portfolio-filters li:hover,
     .portfolio-filters li.filter-active {
       color: #fff;
-      background: linear-gradient(90deg, #F87B1B, #11224E);
+      background: linear-gradient(90deg, #F87B1B, #0077b6);
       border-color: #F87B1B;
       box-shadow: 0 5px 15px rgba(248, 123, 27, 0.3);
     }
-    
+
     .portfolio-item {
       position: relative;
       overflow: hidden;
@@ -68,23 +71,23 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
     }
-    
+
     .portfolio-item:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
-    
+
     .portfolio-item img {
       transition: all 0.5s ease;
       width: 100%;
       height: 300px;
       object-fit: cover;
     }
-    
+
     .portfolio-item:hover img {
       transform: scale(1.1);
     }
-    
+
     .portfolio-info {
       position: absolute;
       bottom: 0;
@@ -96,30 +99,30 @@
       transform: translateY(100%);
       opacity: 0;
     }
-    
+
     .portfolio-item:hover .portfolio-info {
       transform: translateY(0);
       opacity: 1;
     }
-    
+
     .portfolio-info h4 {
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 5px;
       color: #222;
     }
-    
+
     .portfolio-info p {
       color: #666;
       font-size: 14px;
       margin-bottom: 15px;
     }
-    
+
     .portfolio-links {
       display: flex;
       gap: 10px;
     }
-    
+
     .portfolio-links a {
       display: flex;
       align-items: center;
@@ -127,40 +130,40 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: linear-gradient(90deg, #F87B1B, #11224E);
+      background: linear-gradient(90deg, #F87B1B, #0077b6);
       color: white;
       font-size: 18px;
       transition: all 0.3s ease;
     }
-    
+
     .portfolio-links a:hover {
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(248, 123, 27, 0.4);
     }
-    
+
     .section-title h2 {
       position: relative;
       padding-bottom: 15px;
     }
-    
+
     .section-title h2:after {
       content: "";
       position: absolute;
       display: block;
       width: 80px;
       height: 3px;
-      background: linear-gradient(90deg, #F87B1B, #11224E);
+      background: linear-gradient(90deg, #F87B1B, #0077b6);
       left: 0;
       right: 0;
       bottom: 0;
       margin: auto;
     }
-    
+
     .portfolio-category {
       position: absolute;
       top: 15px;
       left: 15px;
-      background: linear-gradient(90deg, #F87B1B, #11224E);
+      background: linear-gradient(90deg, #F87B1B, #0077b6);
       color: white;
       padding: 5px 15px;
       border-radius: 20px;
@@ -185,7 +188,8 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="https://www.youtube.com/channel/UCnB4uwRJC25qG9gI5Yc0UBQ" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="https://www.youtube.com/channel/UCnB4uwRJC25qG9gI5Yc0UBQ"
+        class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/sc.png" alt="" srcset="">
       </a>
 
@@ -250,8 +254,11 @@
                 <h4>E-Commerce App</h4>
                 <p>A full-featured online shopping application with payment integration</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="E-Commerce App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="E-Commerce App"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -263,8 +270,11 @@
                 <h4>Corporate Website</h4>
                 <p>Modern corporate website with responsive design and CMS integration</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Corporate Website" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Corporate Website"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -276,8 +286,11 @@
                 <h4>Brand Identity</h4>
                 <p>Complete brand identity package including logo and marketing materials</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Brand Identity" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Brand Identity"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -289,8 +302,11 @@
                 <h4>Task Management App</h4>
                 <p>Productivity application for teams with real-time collaboration features</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="Task Management App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="Task Management App"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -302,8 +318,11 @@
                 <h4>Restaurant Website</h4>
                 <p>Interactive restaurant website with online ordering system</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Restaurant Website" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Restaurant Website"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -315,8 +334,11 @@
                 <h4>Mobile App UI</h4>
                 <p>User interface design for a fitness tracking mobile application</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Mobile App UI" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Mobile App UI"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -328,8 +350,11 @@
                 <h4>Finance Dashboard</h4>
                 <p>Data visualization dashboard for financial analytics and reporting</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="Finance Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="Finance Dashboard"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -341,8 +366,11 @@
                 <h4>E-Learning Platform</h4>
                 <p>Comprehensive online learning platform with course management</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="E-Learning Platform" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="E-Learning Platform"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -354,8 +382,11 @@
                 <h4>Social Media Graphics</h4>
                 <p>Collection of social media graphics and promotional materials</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Social Media Graphics" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Social Media Graphics"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -374,7 +405,8 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Yahya</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Yahya</strong> <span>All Rights
+            Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -390,7 +422,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
