@@ -19,16 +19,16 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff;
-  /* White background */
+  --background-color: #ADD8E6;
+  /* Light blue background */
   --default-color: #333333;
   /* Darker grey for text readability */
   --heading-color: #0077b6;
   /* Light blue for headings */
   --accent-color: #F87B1B;
   /* Orange accent */
-  --surface-color: #f0f8ff;
-  /* Very light blue for surfaces */
+  --surface-color: #ADD8E6;
+  /* Light blue for surfaces */
   --contrast-color: #ffffff;
   /* White for contrast text */
 }
@@ -48,12 +48,16 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f8f9fa;
+  --background-color: #ADD8E6;
   --surface-color: #ffffff;
 }
 
+.bg-light {
+  background-color: #ADD8E6 !important;
+}
+
 .dark-background {
-  --background-color: #e0f2f1;
+  --background-color: #ADD8E6;
   /* Light blue/teal background */
   --default-color: #333333;
   --heading-color: #0077b6;
