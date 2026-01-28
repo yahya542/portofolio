@@ -10,7 +10,7 @@
   <meta name="keywords" content="Certificates, Achievements, Full Stack Developer, Web Development, Muhammad Yahya">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/aku.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -338,6 +338,40 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Project Data -->
+  <script src="assets/js/project-data.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const certificatesContainer = document.querySelector('.row.gy-4');
+      // Clear existing static items
+      certificatesContainer.innerHTML = '';
+
+      const certificateData = window.projectData.certificates || [];
+
+      if (certificateData.length > 0) {
+        certificateData.forEach(item => {
+          const certItem = document.createElement('div');
+          certItem.className = 'col-lg-6';
+          certItem.setAttribute('data-aos', 'fade-up');
+          certItem.setAttribute('data-aos-delay', '100'); // Simple delay
+          certItem.innerHTML = `
+            <div class="certificate-card">
+              <img src="${item.image}" alt="${item.title}" class="certificate-image">
+              <h3 class="certificate-title">${item.title}</h3>
+              <p class="certificate-description">${item.description}</p>
+              <div class="certificate-meta">
+                <span><i class="bi bi-calendar"></i> Issued: ${item.date}</span>
+                <span><i class="bi bi-award"></i> Credential ID: ${item.credentialId}</span>
+              </div>
+              <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+          `;
+          certificatesContainer.appendChild(certItem);
+        });
+      }
+    });
+  </script>
 
 </body>
 

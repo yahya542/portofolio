@@ -10,7 +10,7 @@
   <meta name="keywords" content="Portfolio, Projects, Web Development, Design, Muhammad Yahya">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/aku.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -441,6 +441,48 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Project Data -->
+  <script src="assets/js/project-data.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const portfolioContainer = document.querySelector('.isotope-container');
+      // Clear existing static items if any (optional, but good for cleanliness if we want fully dynamic)
+      // portfolioContainer.innerHTML = ''; 
+      // Actually, since we want to replace the hardcoded ones, we should clear it.
+      // But wait, the Isotope layout might break if we just clear innerHTML without Isotope methods.
+      // However, since this runs on DOMContentLoaded, Isotope might not be initialized yet or just initialized.
+      // Let's try to clear it.
+      portfolioContainer.innerHTML = '';
+
+      const portfolioData = window.projectData.portfolio || [];
+
+      if (portfolioData.length > 0) {
+        portfolioData.forEach(item => {
+          const portfolioItem = document.createElement('div');
+          portfolioItem.className = `col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}`;
+          portfolioItem.innerHTML = `
+            <div class="portfolio-category">${item.category === 'filter-app' ? 'Application' : item.category === 'filter-product' ? 'Website' : 'Design'}</div>
+            <img src="${item.image}" class="img-fluid" alt="${item.title}">
+            <div class="portfolio-info">
+              <h4>${item.title}</h4>
+              <p>${item.description}</p>
+              <div class="portfolio-links">
+                <a href="${item.image}" title="${item.title}" data-gallery="portfolio-gallery-${item.category.replace('filter-', '')}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          `;
+          portfolioContainer.appendChild(portfolioItem);
+        });
+
+        // Trigger resize to help Isotope layout
+        setTimeout(() => {
+          window.dispatchEvent(new Event('resize'));
+        }, 500);
+      }
+    });
+  </script>
 
 </body>
 
