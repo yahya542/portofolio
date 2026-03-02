@@ -48,7 +48,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(rgba(173, 216, 230, 0.8), rgba(173, 216, 230, 0.8)), url('assets/img/bg/dark.jpg') no-repeat center center fixed;
+      background: url('assets/img/bg/dark.jpg') no-repeat center center fixed;
       background-blend-mode: overlay;
       background-size: cover;
       background-position: center;
@@ -591,13 +591,13 @@
         font-size: 0.7rem;
       }
 
-      /* Hide background image on mobile for better performance */
+      /* Keep background image on mobile with lighter overlay */
       .hero {
-        background-image: none !important;
+        background-attachment: scroll !important;
       }
 
       .hero::before {
-        background: linear-gradient(135deg, rgba(173, 216, 230, 0.95) 0%, rgba(135, 206, 250, 0.9) 100%);
+        background: linear-gradient(135deg, rgba(173, 216, 230, 0.4) 0%, rgba(135, 206, 250, 0.3) 100%);
       }
     }
 
