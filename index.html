@@ -455,7 +455,8 @@
       margin: 0 auto;
     }
 
-    @media (max-width: 992px) {
+    /* Enhanced Mobile Responsive Design */
+    @media (max-width: 1200px) {
       .hero h1 {
         font-size: 3rem;
       }
@@ -469,87 +470,255 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
+      .hero-content {
+        padding: 2rem 1.5rem;
+        margin: 0 20px;
+      }
+
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+      }
+
+      .hero h2 {
+        font-size: 1.3rem;
       }
 
       .welcome-msg {
         font-size: 1rem;
-      }
-
-      .hero h2 {
-        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
       }
 
       .typing-text {
         font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+
+      .buttons-container {
+        gap: 12px;
       }
 
       .btn-custom,
       .btn-outline-custom {
         padding: 12px 25px;
-        font-size: 1rem;
-        margin: 5px;
+        font-size: 0.9rem;
+      }
+
+      .social-icons {
+        gap: 15px;
+        margin-top: 2rem;
       }
 
       .social-icons a {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-      }
-
-      .pricing-card {
-        margin-bottom: 20px;
-      }
-
-      .pricing-price {
-        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
       }
     }
 
-    @media (max-width: 576px) {
-      .hero h1 {
-        font-size: 2rem;
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 100vh;
+        background-attachment: scroll;
       }
 
       .hero-content {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
+        margin: 0 15px;
+        border-radius: 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+      }
+
+      .hero h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+
+      .welcome-msg {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+        letter-spacing: 2px;
+        margin-bottom: 1.2rem;
+        margin-left: 0 !important;
+      }
+
+      .typing-text {
+        font-size: 1rem;
+        min-height: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0 !important;
       }
 
       .buttons-container {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-left: 0 !important;
       }
 
-      .service-offers {
-        padding: 50px 0;
+      .btn-custom,
+      .btn-outline-custom {
+        padding: 14px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .social-icons {
+        gap: 12px;
+        margin-top: 1.5rem;
+        margin-left: 0 !important;
+        padding-top: 1.5rem;
+      }
+
+      .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+
+      .scroll-indicator {
+        bottom: 20px;
+        font-size: 0.7rem;
+      }
+
+      .scroll-indicator span {
+        font-size: 0.7rem;
+      }
+
+      /* Hide background image on mobile for better performance */
+      .hero {
+        background-image: none !important;
+      }
+
+      .hero::before {
+        background: linear-gradient(135deg, rgba(173, 216, 230, 0.95) 0%, rgba(135, 206, 250, 0.9) 100%);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-content {
+        padding: 1rem 0.8rem;
+        margin: 0 10px;
+        border-radius: 15px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .hero h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .welcome-msg {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+        letter-spacing: 1px;
+      }
+
+      .typing-text {
+        font-size: 0.9rem;
+        min-height: 1.3rem;
+      }
+
+      .btn-custom,
+      .btn-outline-custom {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+        max-width: 250px;
+      }
+
+      .social-icons a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .pricing-container {
+        padding: 10px;
+        gap: 15px;
       }
 
       .pricing-card {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       .pricing-header {
-        padding: 20px 15px 15px;
+        padding: 25px 20px 15px;
       }
 
       .pricing-title {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       .pricing-price {
-        font-size: 22px;
+        font-size: 24px;
       }
 
       .pricing-body {
-        padding: 20px 15px;
+        padding: 15px 20px 25px;
       }
 
-      .pricing-features li {
-        padding: 8px 0;
-        font-size: 13px;
+      .service-header h3 {
+        font-size: 2rem;
+      }
+
+      .service-header p {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero-content {
+        padding: 0.8rem 0.5rem;
+        margin: 0 5px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero h2 {
+        font-size: 0.9rem;
+      }
+
+      .welcome-msg {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+
+      .typing-text {
+        font-size: 0.85rem;
+      }
+
+      .btn-custom,
+      .btn-outline-custom {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+        max-width: 220px;
+      }
+
+      .social-icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Fix for elements with hardcoded margins */
+    @media (max-width: 768px) {
+      [style*="margin-left: 200px"] {
+        margin-left: 0 !important;
+        text-align: center;
       }
     }
   </style>

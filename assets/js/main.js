@@ -282,7 +282,125 @@
   // Run custom animations on load
   window.addEventListener('load', initCustomAnimations);
   
-  // Run custom animations on DOM content loaded
-  document.addEventListener('DOMContentLoaded', initCustomAnimations);
+  /**
+   * Mobile-specific enhancements
+   */
+  function initMobileEnhancements() {
+    // Detect mobile devices
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // Add mobile class to body
+      document.body.classList.add('mobile-device');
+      
+      // Optimize images for mobile
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading attribute for better performance
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Optimize image sizes for mobile
+        if (img.src && img.src.includes('assets/img')) {
+          const parent = img.parentElement;
+          if (parent && parent.classList.contains('hero')) {
+            // Hide decorative images on mobile
+            img.style.display = 'none';
+          }
+        }
+      });
+      
+      // Adjust hero section for mobile
+      const heroSection = document.querySelector('.hero');
+      if (heroSection) {
+        // Remove fixed background attachment on mobile
+        heroSection.style.backgroundAttachment = 'scroll';
+        
+        // Add mobile-specific styling
+        heroSection.classList.add('mobile-hero');
+      }
+      
+      // Optimize buttons for touch
+      const buttons = document.querySelectorAll('button, .btn');
+      buttons.forEach(button => {
+        button.style.minHeight = '44px'; // Minimum touch target size
+        button.style.minWidth = '44px';
+      });
+      
+      // Handle orientation changes
+      window.addEventListener('orientationchange', function() {
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 100);
+      });
+    }
+  }
+  
+  /**
+   * Touch device specific interactions
+   */
+  function initTouchInteractions() {
+    // Add touch-friendly hover effects
+    const interactiveElements = document.querySelectorAll('a, button, .btn, .portfolio-item, .service-item');
+    
+    interactiveElements.forEach(element => {
+      // Add visual feedback for touch
+      element.addEventListener('touchstart', function() {
+        this.classList.add('touch-active');
+      });
+      
+      element.addEventListener('touchend', function() {
+        setTimeout(() => {
+          this.classList.remove('touch-active');
+        }, 150);
+      });
+    });
+    
+    // Prevent zoom on double tap
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+      const now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+  }
+  
+  /**
+   * Performance optimizations for mobile
+   */
+  function initMobilePerformance() {
+    // Lazy load non-critical resources
+    if ('IntersectionObserver' in window) {
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      lazyImages.forEach(img => imageObserver.observe(img));
+    }
+    
+    // Reduce animations on mobile for better performance
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (reduceMotion.matches || isMobile) {
+      document.body.classList.add('reduce-motion');
+    }
+  }
+  
+  // Initialize mobile enhancements
+  window.addEventListener('load', function() {
+    initMobileEnhancements();
+    initTouchInteractions();
+    initMobilePerformance();
+  });
 
 })();
