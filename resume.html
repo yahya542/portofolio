@@ -33,9 +33,12 @@
 
   <!-- Custom Styles -->
   <style>
+    #header {
+      background-color: pink;
+    }
     /* Enhanced Resume Styling */
     #resume { 
-      background-image: url('assets/img/bg/sakura.jpg')  ;
+      background-image: linear-gradient(rgba(250, 185, 185, 0.976), rgba(0, 0, 0, 0.5)),   url('assets/img/bg/sakura.jpg')  ;
       background-size: cover; /* Gambar menutupi seluruh layar */
       background-position: center; /* Gambar tetap di tengah */
       background-repeat: no-repeat; /* Mencegah gambar berulang */
@@ -44,12 +47,12 @@
 }
     
 
-    }
+    
     .profile-section {
-      background: linear-gradient(135deg, #0077b6 0%, #add8e6 100%);
+      background-color: black;
       border-radius: 15px;
       padding: 40px;
-      color: white;
+      color: pink;
       margin-bottom: 40px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       position: relative;
@@ -63,8 +66,8 @@
       position: absolute;
       top: -50%;
       left: -50%;
-      width: 200%;
-      height: 200%;
+      width: 100%;
+      height: 100%;
       background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
       transform: rotate(30deg);
     }
@@ -472,8 +475,8 @@
         <div class="profile-section" data-aos="fade-up">
           <div class="row">
             <div class="col-lg-8">
-              <h1 class="profile-name">MUHAMMAD YAHYA ABDULLAHISSALAM</h1>
-              <h2 class="profile-title">FULLSTACK ENGINEER</h2>
+              <h1 class="profile-name" style="color: antiquewhite;">MUHAMMAD YAHYA ABDULLAHISSALAM</h1>
+              <h2 class="profile-title" style="color: antiquewhite;">FULLSTACK ENGINEER</h2>
               <p>Innovative and deadline-driven Fullstack Engineer with proven experience in designing and implementing
                 scalable systems, managing cloud infrastructure, and developing robust backend solutions using Django,
                 Laravel, and Golang.</p>
@@ -531,10 +534,10 @@
           <!-- Professional Summary -->
           <div class="col-12" data-aos="fade-up">
             <div class="section-title-modern">
-              <h2>PROFESSIONAL SUMMARY</h2>
+              <h2 style="color: antiquewhite;">PROFESSIONAL SUMMARY</h2>
             </div>
 
-            <div class="resume-card">
+            <div class="resume-card" style="background-color: rgba(242, 214, 226, 0.9);">
               <p>Mahasiswa Teknik Informatika (Semester 5) dengan keahlian <strong>Full Stack</strong> dan fokus kuat
                 pada <strong>Backend Engineering</strong> (Django, Laravel, Golang) serta <strong>Administrasi
                   Infrastruktur (DevOps)</strong>. Terbukti mampu menjembatani pengembangan kode dan stabilitas sistem.
@@ -550,13 +553,13 @@
           </div>
 
           <!-- Work Experience -->
-          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="100" >
             <div class="section-title-modern">
               <h2>WORK EXPERIENCE</h2>
             </div>
 
             <!-- Experience 1 -->
-            <div class="resume-card">
+            <div class="resume-card" >
               <h3>DevOps System Administrator (Kontrak Kampus)</h3>
               <h4>Kontrak Paruh Waktu Kampus (Sedang Berjalan)</h4>
               <div class="resume-period">Present</div>
@@ -660,7 +663,8 @@
                 </div>
               </div>
 
-              <div class="skill-category">
+              <!-- Other Technologies -->
+              <!-- <div class="skill-category">
                 <h4><i class="bi bi-tools"></i> Other Technologies</h4>
                 <div class="skill-tags">
                   <span class="skill-tag">MVC</span>
@@ -668,7 +672,7 @@
                   <span class="skill-tag">VS Code</span>
                   <span class="skill-tag">Drawio</span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -709,6 +713,7 @@
           <a href="#" class="download-btn"><i class="bi bi-download"></i> Download Professional Resume (PDF)</a>
         </div>
       </div>
+
       <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Yahya</strong> <span>All Rights
