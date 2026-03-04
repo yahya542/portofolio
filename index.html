@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- add a page-specific class to body for styling overrides -->
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -41,6 +43,20 @@
 
   <!-- Custom Styles for Enhanced Design -->
   <style>
+    /* page-specific header/nav colour for index */
+    #header {
+      background-color: transparent !important; /* Gunakan !important agar tidak ditimpa */
+      position: fixed;
+      border: none !important;
+      box-shadow: none !important; /* Pastikan tidak ada bayangan di header */
+      outline: none;
+    }
+    #nav-menu  {
+      color: #fff;
+    }
+    .page-index .nav-menu a:hover {
+      color: whitesmoke;
+    }
     .hero {
       position: relative;
       overflow: hidden;
@@ -730,7 +746,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="https://www.instagram.com/sajakcodingan_" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/fotoku.png" alt="" srcset="">
+        <img src="assets/img/aku.png" alt="" srcset="">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -754,13 +770,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
-
+     
     </div>
   </header>
 
@@ -861,9 +871,11 @@
         if (letter.length === currentText.length) {
           count++;
           index = 0;
-          setTimeout(type, 2000);
+          /* pause a little longer between full phrases */
+          setTimeout(type, 2500);
         } else {
-          setTimeout(type, 100);
+          /* slower typing speed to make it stable */
+          setTimeout(type, 200);
         }
       }());
     });

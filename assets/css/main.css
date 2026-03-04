@@ -35,7 +35,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #333333;
+  --nav-color: #fff;
   /* Darker grey for nav links */
   --nav-hover-color: #F87B1B;
   /* Orange hover */
@@ -69,6 +69,22 @@
 :root {
   scroll-behavior: smooth;
 }
+
+
+
+.page-index {
+  --background-color: orange;
+  --accent-color: #F87B1B;
+  --heading-color: #0077b6;
+}
+
+.page-index .header {
+  background: orange !important;
+}
+
+/* other pages: .page-about, .page-contact, etc. */
+
+*/
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
