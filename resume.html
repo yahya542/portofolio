@@ -50,27 +50,45 @@
     
     .profile-section {
       background-color: black;
+      perspective: 1000px;
       border-radius: 15px;
       padding: 40px;
       color: pink;
       margin-bottom: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      
+      /* Efek 3D Utama */
+      transform: rotateX(10deg) rotateY(-10deg);
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      
+      /* Shadow lebih dalam untuk kedalaman */
+      box-shadow: 20px 20px 50px rgba(240, 237, 237, 0.5), 
+                  -5px -5px 20px rgba(255, 192, 203, 0.1);
+                  
       position: relative;
       overflow: hidden;
       animation: fadeInUp 0.8s ease-out;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
+      border: 1px solid rgba(255, 192, 203, 0.3); /* Border pink tipis */
+}
 
-    .profile-section:before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-      transform: rotate(30deg);
-    }
+/* Efek interaktif saat kursor mendekat */
+.profile-section:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 192, 203, 0.3);
+}
+
+.profile-section:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%; /* Diperbesar agar gradient lebih halus */
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.15) 0%, transparent 70%);
+  transform: translateZ(-1px) rotate(30deg); /* Menaruh gradient di belakang konten */
+  pointer-events: none;
+}
+
 
     .profile-name {
       font-size: 2.5rem;
@@ -480,64 +498,12 @@
               <p>Innovative and deadline-driven Fullstack Engineer with proven experience in designing and implementing
                 scalable systems, managing cloud infrastructure, and developing robust backend solutions using Django,
                 Laravel, and Golang.</p>
-            </div>
-            <div class="col-lg-4">
-              <div class="contact-info">
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
-                  <div>
-                    <div class="fw-bold">Location</div>
-                    <div>Pamekasan, 69316</div>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="bi bi-phone"></i></div>
-                  <div>
-                    <div class="fw-bold">Phone</div>
-                    <div>0812-5999-3397</div>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="bi bi-envelope"></i></div>
-                  <div>
-                    <div class="fw-bold">Email</div>
-                    <div>muhyahyaas@gmail.com</div>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
-                  <div>
-                    <div class="fw-bold">LinkedIn</div>
-                    <div>/in/muhammad-yahya-abdullahissalam-083b73327/</div>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="bi bi-github"></i></div>
-                  <div>
-                    <div class="fw-bold">Portfolio</div>
-                    <div>github.com/yahya542/Fullstack-Web-development</div>
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="contact-icon"><i class="bi bi-display"></i></div>
-                  <div>
-                    <div class="fw-bold">Web App Demo</div>
-                    <div>sparkling-panda-e0fb19.netlify.app</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- Professional Summary -->
-          <div class="col-12" data-aos="fade-up">
+                <div class="col-12" data-aos="fade-up">
             <div class="section-title-modern">
               <h2 style="color: antiquewhite;">PROFESSIONAL SUMMARY</h2>
             </div>
 
-            <div class="resume-card" style="background-color: rgba(242, 214, 226, 0.9);">
+            <div class="resume-card" style="background-color: transparent; box-shadow: none; border: none; position: relative;">
               <p>Mahasiswa Teknik Informatika (Semester 5) dengan keahlian <strong>Full Stack</strong> dan fokus kuat
                 pada <strong>Backend Engineering</strong> (Django, Laravel, Golang) serta <strong>Administrasi
                   Infrastruktur (DevOps)</strong>. Terbukti mampu menjembatani pengembangan kode dan stabilitas sistem.
@@ -551,6 +517,56 @@
               </p>
             </div>
           </div>
+            </div>
+            <div class="col-lg-4" style="border-color: bisque; border: 2px solid;">
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+                  <div>
+                    <div class="fw-bold">Location</div>
+                    <div>Pamekasan, 69316</div>
+                  </div>
+                </div>
+               
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+                  <div>
+                    <div class="fw-bold">Email</div>
+                    <div>sajakcodingan@gmail.com</div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+                  <div>
+                    <div class="fw-bold">LinkedIn</div>
+                    <div>/in/muhammad-yahya-abdullahissalam-083b73327/</div>
+                  </div>
+                </div>
+
+
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="bi bi-github"></i></div>
+                  <div>
+                    <div class="fw-bold">Portfolio</div>
+                    <div>github.com/yahya542/</div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="bi bi-phone"></i></div>
+                  <div>
+                    <div class="fw-bold">Phone</div>
+                    <div>0851 8464 7793</div>
+                  </div>
+                </div> 
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+         
+        
 
           <!-- Work Experience -->
           <div class="col-12" data-aos="fade-up" data-aos-delay="100" >
@@ -724,9 +740,6 @@
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits text-center">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
