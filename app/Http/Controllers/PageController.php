@@ -6,20 +6,16 @@ use App\Models\Certificate;
 use App\Models\Menu;
 use App\Models\Page;
 use App\Models\PortfolioItem;
+use App\Models\ResumeSection;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function show($slug)
     {
-        $menus = Menu::where('is_active', true)
-            ->orderBy('order_number')
-            ->get()
-            ->groupBy('parent_id');
-
         // Handle special pages that don't need database content
         if (in_array($slug, ['portfolio', 'certificates', 'services'])) {
-            $data = ['menus' => $menus];
+            $data = [];
 
             switch ($slug) {
                 case 'portfolio':
@@ -44,12 +40,29 @@ class PageController extends Controller
             return view("frontend.{$slug}", $data);
         }
 
+        // For About and Resume pages, load resume sections
+        if (in_array($slug, ['about', 'resume'])) {
+            $resumeSections = ResumeSection::active()
+                ->ordered()
+                ->get()
+                ->groupBy('section_type');
+
+            if ($slug === 'resume') {
+                return view('frontend.resume', compact('resumeSections'));
+            }
+
+            $data = compact('resumeSections');
+
+            // About page has its own view at frontend/about.blade.php
+            return view("frontend.{$slug}", $data);
+        }
+
         // For other pages, get content from database
         $page = Page::where('slug', $slug)
             ->where('is_published', true)
             ->firstOrFail();
 
-        $data = ['page' => $page, 'menus' => $menus];
+        $data = ['page' => $page];
 
         // Check if specific view exists, otherwise use default
         $viewName = "frontend.{$slug}";

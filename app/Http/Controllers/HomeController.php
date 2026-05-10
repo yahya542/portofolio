@@ -11,11 +11,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $menus = Menu::where('is_active', true)
-            ->orderBy('order_number')
-            ->get()
-            ->groupBy('parent_id');
-
         $featuredPortfolio = PortfolioItem::where('is_featured', true)
             ->where('is_published', true)
             ->with('category')
@@ -27,6 +22,6 @@ class HomeController extends Controller
             ->limit(4)
             ->get();
 
-        return view('frontend.home', compact('menus', 'featuredPortfolio', 'certificates'));
+        return view('frontend.home', compact('featuredPortfolio', 'certificates'));
     }
 }

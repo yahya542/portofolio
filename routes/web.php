@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 // Secret login routes (before other routes to avoid conflicts)
 Route::get('/secret-login', [SecretLoginController::class, 'showLoginForm'])->name('admin.login.form');
-Route::post('/secret-login', [SecretLoginController::class, 'login'])->name('admin.login');
+Route::middleware('throttle:5,1')->group(function () {
+    Route::post('/secret-login', [SecretLoginController::class, 'login'])->name('admin.login');
+});
 Route::post('/logout', [SecretLoginController::class, 'logout'])->name('admin.logout');
 Route::get('/api/secret-login', [SecretLoginController::class, 'check']);
 

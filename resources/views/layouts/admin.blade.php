@@ -48,6 +48,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.resume.index') }}">
+                            <i class="fas fa-file-alt"></i> Resume Sections
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.menus.index') }}">
                             <i class="fas fa-bars"></i> Menus
                         </a>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CertificateController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PortfolioItemController;
+use App\Http\Controllers\Admin\ResumeSectionController;
 use App\Http\Controllers\Admin\UploadedImageController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +32,7 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
     Route::get('/pages', [DashboardController::class, 'pages'])->name('admin.pages.index');
     Route::get('/pages/{page}/edit', [DashboardController::class, 'editPage'])->name('admin.pages.edit');
     Route::put('/pages/{page}', [DashboardController::class, 'updatePage'])->name('admin.pages.update');
+
+    // Resume Sections management
+    Route::resource('resume', ResumeSectionController::class, ['as' => 'admin']);
 });

@@ -16,7 +16,12 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!auth()->check()) {
-            return redirect('/')->with('error', 'Access denied.');
+            return redirect('/secret-login');
+        }
+
+        if (!auth()->user()->is_admin) {
+            auth()->logout();
+            return redirect('/secret-login')->with('error', 'Access denied. Admin privileges required.');
         }
 
         return $next($request);

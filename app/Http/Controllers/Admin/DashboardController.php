@@ -7,6 +7,7 @@ use App\Models\Certificate;
 use App\Models\Menu;
 use App\Models\Page;
 use App\Models\PortfolioItem;
+use App\Models\ResumeSection;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -21,6 +22,7 @@ class DashboardController extends Controller
             'certificates' => Certificate::count(),
             'pages' => Page::count(),
             'menus' => Menu::count(),
+            'resume_sections' => ResumeSection::count(),
         ];
 
         return view('admin.dashboard', compact('stats'));

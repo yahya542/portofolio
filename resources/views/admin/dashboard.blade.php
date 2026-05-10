@@ -52,21 +52,35 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-danger">
-                                <div class="inner">
-                                    <h3>{{ $stats['menus'] }}</h3>
-                                    <p>Menu Items</p>
+<div class="col-lg-3 col-6">
+                                <div class="small-box bg-danger">
+                                    <div class="inner">
+                                        <h3>{{ $stats['menus'] }}</h3>
+                                        <p>Menu Items</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                    <a href="{{ route('admin.menus.index') }}" class="small-box-footer">
+                                        Manage <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
                                 </div>
-                                <div class="icon">
-                                    <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box bg-primary">
+                                    <div class="inner">
+                                        <h3>{{ $stats['resume_sections'] }}</h3>
+                                        <p>Resume Sections</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <a href="{{ route('admin.resume.index') }}" class="small-box-footer">
+                                        Manage <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
                                 </div>
-                                <a href="{{ route('admin.menus.index') }}" class="small-box-footer">
-                                    Manage <i class="fas fa-arrow-circle-right"></i>
-                                </a>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
